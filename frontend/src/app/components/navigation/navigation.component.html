@@ -1,0 +1,7 @@
+<nav>
+    <a *ngIf="loggedIn$ === false" routerLink="signup"><span>SIGNUP</span></a>
+    <a *ngIf="loggedIn$ === false" routerLink=""><span>LOGIN</span></a>
+    <a *ngIf="loggedIn$ === true" routerLink="posts"><span>POSTS</span></a>
+    <a *ngIf="loggedIn$ === true" type="submit" (click)="logout()">LOGOUT</a>
+</nav>
+<div class="img-cont"></div>

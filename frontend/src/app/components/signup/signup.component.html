@@ -1,0 +1,21 @@
+<div class="img-cont"></div>
+<form class="signup-form" #signupForm="ngForm" (ngSubmit)="signup(signupForm.value)">
+    <div class="form-group">
+        <label class="label" for="email">EMAIL</label>
+        <br><input type="email" #email="ngModel" ngModel name="email" class="form-control" required>
+        <div class="error" *ngIf="email.invalid && email.touched">Email invalid</div>
+    </div>
+    <div class="form-group">
+        <label class="label" for="password">PASSWORD</label>
+        <br><input type="password" #password="ngModel" ngModel name="password" class="form-control" required>
+        <div class="error" *ngIf="password.invalid && password.touched">Password invalid</div>
+    </div>
+    <div class="form-group d-flex justify-content-center ">
+        <button type="submit" class="btn signup" [disabled]='!signupForm.valid'>SIGNUP</button>
+    </div>
+    <div class="form-group ">
+        <div class="text-center">
+            <a routerLink="">I already have an account</a>
+        </div>
+    </div>
+</form>

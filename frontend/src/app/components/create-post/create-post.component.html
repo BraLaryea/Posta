@@ -1,0 +1,18 @@
+<button mat-raised-button color="accent" (click)="isOpen = !isOpen">
+    <mat-icon>add</mat-icon>CREATE POST
+</button>
+<form *ngIf="isOpen" [formGroup]='postForm' (ngSubmit)='post(postForm.value)' novalidate>
+    <mat-form-field>
+        <label>TITLE</label>
+        <br><input formControlName='title' />
+        <div *ngIf="title.invalid && title.touched" class="error">title cannot be empty</div>
+    </mat-form-field>
+    <mat-form-field>
+        <label>BODY</label>
+        <br><textarea color="accent" formControlName='body' class="body"></textarea>
+        <div *ngIf="body.invalid && body.touched" class="error">Body cannot be empty</div>
+    </mat-form-field>
+    <button class="post" type="submit" [disabled]='!postForm.valid'>
+        POST
+    </button>
+</form>

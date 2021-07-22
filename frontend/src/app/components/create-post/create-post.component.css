@@ -1,0 +1,32 @@
+mat-form-field, button {
+  width: 90%;
+  text-align: center;
+}
+button {
+  margin-bottom: 10px;
+}
+.post{
+  height: 30px;
+  border: thin;
+}
+.body{
+  height: 80px;
+  width: 90%;
+  margin-bottom: 10px;
+  border: solid 1px rgb(239 239 239);
+  border-radius: 5px;
+}
+input{
+  width: 90%;
+  margin-bottom: 10px;
+  border: solid 1px rgb(239 239 239);
+  border-radius: 5px;
+  height: 25px
+}
+.error{
+  width: 90%;
+  text-align: center;
+  margin: auto;
+  color: red;
+  font-size: small;
+}

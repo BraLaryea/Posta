@@ -1,0 +1,21 @@
+<div class="img-cont"></div>
+<form class="login-form" [formGroup]='LoginForm' (ngSubmit)='login()' novalidate>
+    <div class="form-group">
+        <label class="label" for="email">EMAIL</label>
+        <input type="text" class="form-control" name="email" formControlName='email'>
+        <div *ngIf="email.invalid && email.touched" class="error">email invalid</div>
+    </div>
+    <div class="form-group"> 
+        <label class="label" for="password">PASSWORD</label>
+        <input type="password" class="form-control" name="password" formControlName='password'>
+        <div *ngIf="password.invalid && password.touched" class="error">password invalid</div>
+    </div>
+    <div class="form-group d-flex justify-content-center ">
+        <button type="submit" class="btn login" [disabled]='LoginForm.invalid'>LOGIN</button>
+    </div>
+    <div class="form-group ">
+        <div class="text-center">
+            <a routerLink="/signup">I don't have an account</a>
+        </div>
+    </div>
+</form>

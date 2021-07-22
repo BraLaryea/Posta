@@ -1,0 +1,35 @@
+input.ng-valid{
+    border-left: solid 5px green;
+}
+
+input.ng-invalid{
+    border-left: solid 5px red;
+}
+
+.img-cont{
+    margin: auto;
+    margin-top: 110px;
+    height: 100px;
+    width: 100px;
+    background: url(../../../assets/posta.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.error{
+    color: red;
+    font-size: small;
+}
+.signup-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.form-group{
+    margin: auto;
+    margin-bottom: 15px;
+
+}
+button {
+  width: 200px;
+  background-color: rgb(146, 146, 146);
+}
